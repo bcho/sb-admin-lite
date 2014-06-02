@@ -31,6 +31,14 @@ module.exports = function (grunt) {
 
         sass: {
             build: {
+                options: {
+                    includePaths: [
+                        '<%= srcDir %>/css',
+                        'bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/'
+                    ],
+                    outputStyle: 'compressed',
+                    sourceComments: 'map'
+                },
                 files: {
                     '<%= buildDir %>/css/sb-admin.css': '<%= srcDir %>/css/sb-admin.scss'
                 }
