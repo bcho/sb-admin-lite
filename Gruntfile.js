@@ -34,7 +34,7 @@ module.exports = function (grunt) {
                 options: {
                     includePaths: [
                         '<%= srcDir %>/css',
-                        'bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/'
+                        './bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/'
                     ],
                     outputStyle: 'compressed',
                     sourceComments: 'map'

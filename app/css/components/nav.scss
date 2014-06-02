@@ -1,0 +1,121 @@
+//
+// Nav: navigation componments for SB Admin.
+// --------------------------------------------------
+
+
+// Nav Messages
+.messages-dropdown {
+  .dropdown-menu {
+    .message-preview {
+      .avatar,
+      .name,
+      .message,
+      .time {
+        display: block;
+      }
+
+      .avatar {
+        float: left;
+        margin-right: 15px;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+
+      .message,
+      .time {
+        font-size: 12px;
+      }
+    }
+
+    @media (min-width: $page-normal-width) {
+      min-width: 300px;
+
+      li {
+        a {
+          white-space: normal;
+        }
+      }
+    }
+  }
+}
+
+// Nav Announcements
+.announcement-heading {
+  font-size: 50px;
+  margin: 0;
+}
+
+.announcement-text {
+  margin: 0;
+}
+
+.side-nav {
+  @media (min-width: $page-normal-width) {
+    margin-left: -225px;
+    left: 225px;
+    width: 225px;
+    position: fixed;
+    top: 50px;
+    height: 100%;
+    border-radius: 0;
+    border: none;
+    background-color: #222222;
+    overflow-y: auto;
+
+    li.dropdown {
+      ul.dropdown-menu {
+        position: relative;
+        min-width: 225px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+
+        li {
+          a {
+            color: #999999;
+            padding: 15px 15px 15px 25px;
+
+            &:hover,
+            &:active,
+            &:focus {
+              color: #fff;
+              background-color: #080808;
+            }
+          }
+        }
+      }
+    }
+
+    li {
+      a {
+        width: 225px;
+      }
+    }
+  }
+}
+
+.navbar-inverse {
+  @media (min-width: $page-normal-width) {
+    li {
+      a {
+        &:hover,
+        &:focus {
+          background-color: #080808;
+        }
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  @media (min-width: $page-normal-width) {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}

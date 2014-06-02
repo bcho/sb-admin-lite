@@ -1,0 +1,24 @@
+//
+// Layout: Base layout for SB Admin.
+// --------------------------------------------------
+
+body {
+  margin-top: 50px;
+}
+
+#wrapper {
+  padding-left: 0;
+
+  @media (min-width: $page-normal-width) {
+    padding-left: 225px;
+  }
+}
+
+#page-wrapper {
+  width: 100%;
+  padding: 5px 15px;
+
+  @media (min-wiidth: $page-normal-width) {
+    padding: 15px 25px;
+  }
+}
