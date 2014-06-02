@@ -21,10 +21,19 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: '<%= srcDir %>',
                     src: [
-                        '**/*.*'
+                        '**/*.*',
+                        '!{,*/}*.scss'
                     ],
                     dest: '<%= buildDir %>'
                 }]
+            }
+        },
+
+        sass: {
+            build: {
+                files: {
+                    '<%= buildDir %>/css/sb-admin.css': '<%= srcDir %>/css/sb-admin.scss'
+                }
             }
         },
 
@@ -32,6 +41,14 @@ module.exports = function (grunt) {
             pages: {
                 files: ['<%= srcDir %>/**/*.html'],
                 tasks: ['copy:build'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            },
+            styles: {
+                files: ['<%= srcDir %>/**/*.scss'],
+                tasks: ['sass:build'],
                 options: {
                     spawn: false,
                     livereload: true
@@ -47,12 +64,18 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', [
+    grunt.registerTask('build', [
         'clean:build',
-        'copy:build',
+        'sass:build',
+        'copy:build'
+    ]);
+
+    grunt.registerTask('default', [
+        'build',
         'connect:server',
-        'watch:pages'
+        'watch'
     ]);
 };
