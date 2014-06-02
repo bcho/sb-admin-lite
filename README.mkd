@@ -1,0 +1,13 @@
+# sb-admin-lite
+
+Lite version of [SB Admin](http://startbootstrap.com/sb-admin).
+
+
+## TODO
+
+- [ ] use SCSS
+
+
+## License
+
+Same as [startbootstrap](https://github.com/IronSummitMedia/startbootstrap/blob/master/LICENSE).
