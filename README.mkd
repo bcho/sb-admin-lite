@@ -5,7 +5,7 @@ Lite version of [SB Admin](http://startbootstrap.com/sb-admin).
 
 ## TODO
 
-- [ ] use SCSS
+- [x] use SASS
 
 
 ## License
